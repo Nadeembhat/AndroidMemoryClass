@@ -1,0 +1,16 @@
+ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+int memoryClass = manager.getMemoryClass();
+
+48  - Samsung Nexus S
+
+64  - Samsung Galaxy Nexus
+      Samsung S2
+      Samsung S3
+
+128 - Samsung S4
+      HTC One
+
+192 - Nexus 5
+      Nexus 7 (2013)
+
+256 - Nexus 6
