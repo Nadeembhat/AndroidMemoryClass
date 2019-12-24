@@ -14,3 +14,98 @@ int memoryClass = manager.getMemoryClass();
       Nexus 7 (2013)
 
 256 - Nexus 6
+
+
+
+You can Use below two methods for getting max heap memory and memory class
+Here are  test results showing the values returned by maxMemory() and getMemoryClass() for four different devices running CyanogenMod, using two different (manually-set) heap values for each:
+
+G1:
+      With VM Heap Size set to 16MB:
+      maxMemory: 16777216
+      getMemoryClass: 16
+      
+      With VM Heap Size set to 24MB:
+      maxMemory: 25165824
+      getMemoryClass: 16
+      
+Moto Droid:
+      With VM Heap Size set to 24MB:
+      maxMemory: 25165824
+      getMemoryClass: 24
+      
+      With VM Heap Size set to 16MB:
+      maxMemory: 16777216
+      getMemoryClass: 24
+      
+Nexus One:
+
+      With VM Heap size set to 32MB:
+      maxMemory: 33554432
+      getMemoryClass: 32
+      
+      With VM Heap size set to 24MB:
+      maxMemory: 25165824
+      getMemoryClass: 32
+      
+Viewsonic GTab:
+      With VM Heap Size set to 32:
+      maxMemory: 33554432
+      getMemoryClass: 32
+
+      With VM Heap Size set to 64:
+      maxMemory: 67108864
+      getMemoryClass: 32
+In addition to the above, it is also tested on a Novo7 Paladin tablet running Ice Cream Sandwich. This was essentially a stock version of ICS, except that ,the deviceis rooted  through a simple process that does not replace the entire OS, and in particular does not provide an interface that would allow the heap size to be manually adjusted.
+
+For that device, here are the results:
+
+Novo7
+maxMemory: 62914560
+getMemoryClass: 60
+Also (per Kishore in a comment below):
+
+HTC One X
+maxMemory: 67108864
+getMemoryClass: 64
+And (per akauppi's comment):
+
+Samsung Galaxy Core Plus
+maxMemory: (Not specified in comment)
+getMemoryClass: 48
+largeMemoryClass: 128
+Per a comment from cmcromance:
+
+Galaxy S3 (Jelly Bean) large heap
+maxMemory: 268435456
+getMemoryClass: 64
+And (per tencent's comments):
+
+LG Nexus 5 (4.4.3) normal
+maxMemory: 201326592
+getMemoryClass: 192
+
+LG Nexus 5 (4.4.3) large heap
+maxMemory: 536870912
+getMemoryClass: 192
+
+Galaxy Nexus (4.3) normal
+maxMemory: 100663296
+getMemoryClass: 96
+
+Galaxy Nexus (4.3) large heap
+maxMemory: 268435456
+getMemoryClass: 96
+
+Galaxy S4 Play Store Edition (4.4.2) normal
+maxMemory: 201326592
+getMemoryClass: 192
+
+Galaxy S4 Play Store Edition (4.4.2) large heap
+maxMemory: 536870912
+getMemoryClass: 192
+Other Devices
+
+Huawei Nexus 6P (6.0.1) normal
+maxMemory: 201326592
+getMemoryClass: 192
